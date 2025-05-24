@@ -60,16 +60,16 @@
     <h2>Points of Interest</h2>
     <ul>
       <li>
-        <a href="#" onclick="flyToLocation(106.79468365214332, 6.592906715566611)">Kelurahan Pabaton(Selasa 20 Mei)</a>
-        <button class="distance-btn" onclick="queryDistance(106.79468365214332, 6.592906715566611, 'Kelurahan Pabaton')">Distance to Kelurahan Pabaton</button>
+        <a href="#" onclick="flyToLocation(-6.592906715566611, 106.79468365214332)">Kelurahan Pabaton(Selasa 20 Mei)</a>
+        <button class="distance-btn" onclick="queryDistance(-6.592906715566611, 106.79468365214332, 'Kelurahan Pabaton')">Distance to Kelurahan Pabaton</button>
       </li>
       <li>
-        <a href="#" onclick="flyToLocation(106.79294852033048, 6.597721468907287)">Kelurahan Paledang (Kamis 22 Mei)</a>
-        <button class="distance-btn" onclick="queryDistance(106.79294852033048, 6.597721468907287, 'Kelurahan Paledang')">Distance to Kelurahan Paledang</button>
+        <a href="#" onclick="flyToLocation(-6.597721468907287, 106.79294852033048)">Kelurahan Paledang (Kamis 22 Mei)</a>
+        <button class="distance-btn" onclick="queryDistance(-6.597721468907287, 106.79294852033048, 'Kelurahan Paledang')">Distance to Kelurahan Paledang</button>
       </li>
       <li>
         <a href="#" onclick="flyToLocation(106.79475976821598, 6.581729156573341)">Kelurahan Cibogor (Jumat 23 Mei)</a>
-        <button class="distance-btn" onclick="queryDistance(106.79475976821598, 6.581729156573341, 'Kelurahan Cibogor')">Distance to Kelurahan Cibogor</button>
+        <button class="distance-btn" onclick="queryDistance(-6.597721468907287, 106.79294852033048, 'Kelurahan Cibogor')">Distance to Kelurahan Cibogor</button>
       </li>
     </ul>
     <button onclick="locateUser()">Go to My Location</button>
@@ -83,16 +83,16 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-    const map = L.map('map').setView([106.79468365214332, 6.592906715566611], 5);
+    const map = L.map('map').setView([-6.597721468907287, 106.79294852033048], 5);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
     const markers = [
-      { coords: [106.79468365214332, 6.592906715566611], popup: 'Kelurahan Pabaton<br>Jadwal: Selasa 20 Mei' },
-      { coords: [106.79294852033048, 6.597721468907287], popup: 'Kelurahan Paledang<br>Jadwal: Kamis 22 Mei' },
-      { coords: [106.79475976821598, 6.581729156573341], popup: 'Kelurahan Cibogor<br>Jadwal: Jumat 23 Mei' }
+      { coords: [-6.592906715566611, 106.79468365214332], popup: 'Kelurahan Pabaton<br>Jadwal: Selasa 20 Mei' },
+      { coords: [-6.597721468907287, 106.79294852033048], popup: 'Kelurahan Paledang<br>Jadwal: Kamis 22 Mei' },
+      { coords: [-6.581729156573341, 106.79475976821598], popup: 'Kelurahan Cibogor<br>Jadwal: Jumat 23 Mei' }
     ];
 
     markers.forEach(({ coords, popup }) => {
